@@ -1,0 +1,12 @@
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.AssemblyInfoInputs.cache
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.AssemblyInfo.cs
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.csproj.CoreCompileInputs.cache
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.sourcelink.json
+D:\NNLT_CSharp\Tuan02\MyLib\bin\Debug\net10.0\MyLib.deps.json
+D:\NNLT_CSharp\Tuan02\MyLib\bin\Debug\net10.0\MyLib.dll
+D:\NNLT_CSharp\Tuan02\MyLib\bin\Debug\net10.0\MyLib.pdb
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.dll
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\refint\MyLib.dll
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\MyLib.pdb
+D:\NNLT_CSharp\Tuan02\MyLib\obj\Debug\net10.0\ref\MyLib.dll
