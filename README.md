@@ -11,11 +11,15 @@ NNLT_CSharp/
 │   ├── .keep
 │   ├── NNLTCSharp.slnx
 │   ├── Buoi01/
-│   │   └── Bai1_1/
-│   │       ├── Bai1_1.cs
-│   │       └── Bai1_1.csproj
+│   │   ├── Bai1_1/
+│   │   │   ├── Bai1_1.cs
+│   │   │   └── Bai1_1.csproj
+│   │   └── Bai1_2/
+│   │       ├── Bai1_2.cs
+│   │       └── Bai1_2.csproj
 │   ├── MyLib/
 │   │   ├── MyLib.csproj
+│   │   ├── Point.cs
 │   │   ├── SinhVien.cs
 │   │   ├── bin/
 │   │   └── obj/
@@ -45,13 +49,21 @@ NNLT_CSharp/
 - File chính: `Bai1_1.cs`
 - File cấu hình: `Bai1_1.csproj`
 
-### 4. MyLib
+### 4. Buoi01/Bai1_2
+
+- Là project Console Application thứ hai trong buổi 1.
+- Có tham chiếu đến project `MyLib` để sử dụng các lớp dùng chung.
+- File chính: `Bai1_2.cs`
+- File cấu hình: `Bai1_2.csproj`
+
+### 5. MyLib
 
 - Là project Class Library.
 - Chứa logic nghiệp vụ và các lớp dữ liệu.
-- Ví dụ: `SinhVien.cs`
+- Các file chính: `Point.cs`, `SinhVien.cs`
+- File cấu hình: `MyLib.csproj`
 
-### 5. MyLib.Tests
+### 6. MyLib.Tests
 
 - Là project kiểm thử đơn vị (unit tests).
 - Dùng để test các chức năng trong `MyLib`.
