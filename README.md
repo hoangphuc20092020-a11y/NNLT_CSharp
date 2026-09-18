@@ -77,6 +77,9 @@ Cấu trúc này theo mô hình chia tách rõ ràng:
 - `Buoi01/Bai1_1`: chứa chương trình chạy
 - `MyLib.Tests`: chứa kiểm thử
 - `NNLTCSharp.slnx`: quản lý toàn bộ solution
+- cd Tuan02/Buoi01/Bai1_2
+- dotnet add reference ../../MyLib/MyLib.csproj
+- $ dotnet sln add Buoi01/Bai1_4/Bai1_4.csproj
 
 ## Kết luận
 
