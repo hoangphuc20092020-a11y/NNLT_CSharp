@@ -1,0 +1,15 @@
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\bin\Debug\net10.0\Bai2_1.exe
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\bin\Debug\net10.0\Bai2_1.deps.json
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\bin\Debug\net10.0\Bai2_1.runtimeconfig.json
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\bin\Debug\net10.0\Bai2_1.dll
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\bin\Debug\net10.0\Bai2_1.pdb
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.GeneratedMSBuildEditorConfig.editorconfig
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.AssemblyInfoInputs.cache
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.AssemblyInfo.cs
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.csproj.CoreCompileInputs.cache
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.sourcelink.json
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.dll
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\refint\Bai2_1.dll
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.pdb
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\Bai2_1.genruntimeconfig.cache
+D:\NNLT_CSharp\Tuan02\ThucHanh02\Bai2_1\obj\Debug\net10.0\ref\Bai2_1.dll
