@@ -11,6 +11,7 @@
     <Project Path="ThucHanh02/Bai1_3/Bai1_3.csproj" />
     <Project Path="ThucHanh02/Bai1_4/Bai1_4.csproj" />
     <Project Path="ThucHanh02/Bai1_5/Bai1_5.csproj" />
+    <Project Path="ThucHanh02/Bai2_2/Bai2_2.csproj" />
   </Folder>
   <Project Path="Buoi01Prj/Buoi01Prj.csproj" />
   <Project Path="MyLib.Tests/MyLib.Tests.csproj" />
