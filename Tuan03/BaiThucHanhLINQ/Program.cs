@@ -13,6 +13,7 @@ class Program
         // Bai31.chay();
         // Bai32.chay();
         Bai4.chay();
+        Bai51.chay();
     }
 
   
