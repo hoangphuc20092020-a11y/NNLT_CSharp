@@ -10,8 +10,9 @@ class Program
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
      
-        Bai31.chay();
-        Bai32.chay();
+        // Bai31.chay();
+        // Bai32.chay();
+        Bai4.chay();
     }
 
   

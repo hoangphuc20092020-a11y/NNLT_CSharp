@@ -3,6 +3,7 @@ namespace BaiThucHanhLINQ;
 public class Bai31
 {
     public static void chay()
+    
     {
         int[] mangSo = { 50, 42, 12, 3, 9, 8, 1, 50, 3, 42, 85 };
         Bai31_A(mangSo);
