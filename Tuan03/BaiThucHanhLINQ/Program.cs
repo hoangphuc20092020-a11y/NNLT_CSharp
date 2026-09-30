@@ -14,8 +14,8 @@ class Program
         // Bai32.chay();
         // Bai4.chay();
         // Bai51.chay();
-        Bai52.chay();
         Bai62.chay();
+        
     }
 
   
