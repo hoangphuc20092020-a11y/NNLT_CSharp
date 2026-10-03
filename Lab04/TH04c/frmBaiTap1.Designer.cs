@@ -93,6 +93,7 @@
             btnTru.TabIndex = 5;
             btnTru.Text = "-";
             btnTru.UseVisualStyleBackColor = true;
+            btnTru.Click += btnTru_Click;
             // 
             // btnNhan
             // 
@@ -102,6 +103,7 @@
             btnNhan.TabIndex = 6;
             btnNhan.Text = "x";
             btnNhan.UseVisualStyleBackColor = true;
+            btnNhan.Click += btnNhan_Click;
             // 
             // btnChia
             // 
@@ -111,6 +113,7 @@
             btnChia.TabIndex = 7;
             btnChia.Text = "/";
             btnChia.UseVisualStyleBackColor = true;
+            btnChia.Click += btnChia_Click;
             // 
             // lblKetQua
             // 
