@@ -45,7 +45,7 @@
             // lblUocBoi
             // 
             lblUocBoi.AutoSize = true;
-            lblUocBoi.Location = new Point(203, 31);
+            lblUocBoi.Location = new Point(40, 31);
             lblUocBoi.Name = "lblUocBoi";
             lblUocBoi.Size = new Size(200, 20);
             lblUocBoi.TabIndex = 0;
@@ -89,7 +89,7 @@
             // 
             // btnTiepTuc
             // 
-            btnTiepTuc.Location = new Point(221, 321);
+            btnTiepTuc.Location = new Point(128, 290);
             btnTiepTuc.Name = "btnTiepTuc";
             btnTiepTuc.Size = new Size(94, 29);
             btnTiepTuc.TabIndex = 5;
@@ -99,7 +99,7 @@
             // 
             // btnThucHien
             // 
-            btnThucHien.Location = new Point(85, 321);
+            btnThucHien.Location = new Point(13, 290);
             btnThucHien.Name = "btnThucHien";
             btnThucHien.Size = new Size(94, 29);
             btnThucHien.TabIndex = 6;
@@ -137,7 +137,7 @@
             // 
             // btnThoat
             // 
-            btnThoat.Location = new Point(321, 321);
+            btnThoat.Location = new Point(242, 290);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new Size(94, 29);
             btnThoat.TabIndex = 11;
@@ -149,7 +149,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(395, 379);
             Controls.Add(btnThoat);
             Controls.Add(txtB);
             Controls.Add(txtA);

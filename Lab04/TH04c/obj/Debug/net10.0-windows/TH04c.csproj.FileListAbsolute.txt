@@ -19,3 +19,4 @@ D:\NNLT_CSharp\Lab04\TH04c\obj\Debug\net10.0-windows\TH04c.csproj.Up2Date
 D:\NNLT_CSharp\Lab04\TH04c\obj\Debug\net10.0-windows\TH04c.frmBaiTap2.resources
 D:\NNLT_CSharp\Lab04\TH04c\obj\Debug\net10.0-windows\TH04c.Properties.Resources.resources
 D:\NNLT_CSharp\Lab04\TH04c\obj\Debug\net10.0-windows\TH04c.frmBaiTap3.resources
+D:\NNLT_CSharp\Lab04\TH04c\obj\Debug\net10.0-windows\TH04c.frmBaiTap4.resources
