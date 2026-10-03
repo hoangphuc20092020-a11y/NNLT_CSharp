@@ -4,5 +4,8 @@
     <Compile Update="fmrBaiTap1.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="frmBaiTap2.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
