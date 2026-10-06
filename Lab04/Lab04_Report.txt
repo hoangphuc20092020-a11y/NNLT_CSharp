@@ -1,0 +1,355 @@
+BÁO CÁO MÃ NGUỒN LAB04
+
+Mục tiêu: gom tất cả file code của Lab04 thành một báo cáo .txt, kèm giải thích ngắn và ví dụ kết quả.
+
+=== Project: TH04d ===
+
+--- File: TH04d\fmrBaiTap1.cs ---
+(using System; ... full source)
+
+Source:
+using System;
+using System.Windows.Forms;
+
+namespace TH04d
+{
+	public partial class fmrBaiTap1 : Form
+	{
+		public fmrBaiTap1()
+		{
+			InitializeComponent();
+		}
+
+		// Khi Form vừa mở
+		private void frmBaiTap1_Load(object sender, EventArgs e)
+		{
+			btnGiai.Enabled = false;
+
+			// Mặc định chọn phương trình bậc nhất
+			rdoPTBN.Checked = true;
+
+			// Ẩn c
+			lblC.Visible = false;
+			txtC.Visible = false;
+		}
+
+		// Chọn phương trình bậc nhất
+		private void rdoPTBN_CheckedChanged(object sender, EventArgs e)
+		{
+			if (rdoPTBN.Checked)
+			{
+				lblC.Visible = false;
+				txtC.Visible = false;
+
+				txtC.Clear();
+
+				KiemTraDuLieu();
+			}
+		}
+
+		// Chọn phương trình bậc hai
+		private void rdoPTBH_CheckedChanged(object sender, EventArgs e)
+		{
+			if (rdoPTBH.Checked)
+			{
+				lblC.Visible = true;
+				txtC.Visible = true;
+
+				KiemTraDuLieu();
+			}
+		}
+
+		// Khi nhập a
+		private void txtA_TextChanged(object sender, EventArgs e)
+		{
+			KiemTraDuLieu();
+		}
+
+		// Khi nhập b
+		private void txtB_TextChanged(object sender, EventArgs e)
+		{
+			KiemTraDuLieu();
+		}
+
+		// Khi nhập c
+		private void txtC_TextChanged(object sender, EventArgs e)
+		{
+			KiemTraDuLieu();
+		}
+
+		// Kiểm tra dữ liệu nhập
+		private bool KiemTraDuLieu()
+		{
+			double a;
+			double b;
+			double c;
+
+			// Kiểm tra a
+			if (!double.TryParse(txtA.Text, out a))
+			{
+				btnGiai.Enabled = false;
+				return false;
+			}
+
+			// Kiểm tra b
+			if (!double.TryParse(txtB.Text, out b))
+			{
+				btnGiai.Enabled = false;
+				return false;
+			}
+
+			// Nếu là phương trình bậc hai thì kiểm tra c
+			if (rdoPTBH.Checked)
+			{
+				if (!double.TryParse(txtC.Text, out c))
+				{
+					btnGiai.Enabled = false;
+					return false;
+				}
+			}
+
+			// Đủ dữ liệu
+			btnGiai.Enabled = true;
+
+			return true;
+		}
+
+		// Nút Giải
+		private void btnGiai_Click(object sender, EventArgs e)
+		{
+			double a;
+			double b;
+			double c = 0;
+
+			// Kiểm tra a
+			if (!double.TryParse(txtA.Text, out a))
+			{
+				MessageBox.Show(
+					"Giá trị a không hợp lệ!",
+					"Thông báo",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Warning);
+
+				txtA.Focus();
+				return;
+			}
+
+			// Kiểm tra b
+			if (!double.TryParse(txtB.Text, out b))
+			{
+				MessageBox.Show(
+					"Giá trị b không hợp lệ!",
+					"Thông báo",
+					MessageBoxButtons.OK,
+					MessageBoxIcon.Warning);
+
+				txtB.Focus();
+				return;
+			}
+
+			// Nếu là bậc hai thì kiểm tra c
+			if (rdoPTBH.Checked)
+			{
+				if (!double.TryParse(txtC.Text, out c))
+				{
+					MessageBox.Show(
+						"Giá trị c không hợp lệ!",
+						"Thông báo",
+						MessageBoxButtons.OK,
+						MessageBoxIcon.Warning);
+
+					txtC.Focus();
+					return;
+				}
+			}
+
+			// Tạo đối tượng PhuongTrinhBacHai
+			PhuongTrinhBacHai pt =
+				new PhuongTrinhBacHai(a, b, c);
+
+			// Giải
+			if (rdoPTBN.Checked)
+			{
+				txtKetQua.Text = pt.GiaiBacNhat();
+			}
+			else
+			{
+				txtKetQua.Text = pt.GiaiBacHai();
+			}
+
+			// Giải xong thì nút Giải mờ đi
+			btnGiai.Enabled = false;
+		}
+
+		// Nút Thoát
+		private void btnThoat_Click(object sender, EventArgs e)
+		{
+			DialogResult result = MessageBox.Show(
+				"Bạn có muốn thoát không?",
+				"Xác nhận",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Question);
+
+			if (result == DialogResult.Yes)
+			{
+				this.Close();
+			}
+		}
+
+		// Khi Form đóng
+		private void frmBaiTap1_FormClosing(
+			object sender,
+			FormClosingEventArgs e)
+		{
+			DialogResult result = MessageBox.Show(
+				"Bạn có muốn đóng Form không?",
+				"Xác nhận",
+				MessageBoxButtons.YesNo,
+				MessageBoxIcon.Question);
+
+			if (result == DialogResult.No)
+			{
+				e.Cancel = true;
+			}
+		}
+	}
+}
+
+Giải thích:
+Form để giải phương trình bậc nhất (ax + b = 0) hoặc bậc hai (ax^2 + bx + c = 0). Giao diện có các ô nhập a, b, c (c ẩn khi chọn bậc nhất). Sử dụng class PhuongTrinhBacHai để tính nghiệm.
+Ví dụ kết quả: a=1,b=-3,c=2 -> x1=2; x2=1
+
+--- File: TH04d\fmrBaiTap1.Designer.cs ---
+Source: (Designer code tạo các điều khiển GUI)
+(omitted here for brevity in báo cáo nhưng có trong project)
+Giải thích: định nghĩa layout, các Label, TextBox, Button và RadioButton dùng trong fmrBaiTap1.
+
+--- File: TH04d\frmBaiTap2.cs ---
+Source: (Form thao tác với lớp MangSoNguyen, xử lý nhập/xuất, sắp xếp, tìm, xóa, thêm, thay thế)
+
+Giải thích:
+Form cho phép nhập mảng số nguyên (dùng chuỗi, phân tách bằng dấu cách/phẩy/;). Các thao tác: sắp xếp tăng/giảm, tìm giá trị, tìm vị trí, xóa theo giá trị/vị trí, thêm tại vị trí, thay thế theo giá trị hoặc vị trí, tính tổng, tổng chẵn/lẻ, tìm max/min.
+Ví dụ: nhập "1 3 2 5" -> xuất "1 3 2 5"; SapXepTang -> "1 2 3 5"; GiaTriLonNhat -> 5.
+
+--- File: TH04d\MangSoNguyen.cs ---
+Source:
+(using System; ...)
+
+public class MangSoNguyen
+{
+	private List<int> mang;
+
+	public MangSoNguyen()
+	{
+		mang = new List<int>();
+	}
+
+	// Nhập mảng
+	public void NhapMang(string chuoi)
+	{
+		string[] phanTu = chuoi.Split(
+			new char[] { ' ', ',', ';' },
+			StringSplitOptions.RemoveEmptyEntries);
+
+		mang.Clear();
+
+		foreach (string s in phanTu)
+		{
+			if (!int.TryParse(s, out int x))
+			{
+				throw new Exception(
+					"Mảng chỉ được chứa số nguyên.");
+			}
+
+			mang.Add(x);
+		}
+
+		if (mang.Count == 0)
+		{
+			throw new Exception(
+				"Mảng không được rỗng.");
+		}
+	}
+
+	// Xuất mảng
+	public string XuatMang()
+	{
+		return string.Join(" ", mang);
+	}
+
+	// ... các phương thức khác: SapXepTang, SapXepGiam, TimGiaTri, TimViTri, XoaGiaTri, XoaViTri, Them, TongMang, TongChan, TongLe, GiaTriLonNhat, GiaTriNhoNhat, ThayTheGiaTri, ThayTheViTri
+}
+
+Giải thích:
+Lớp tiện ích quản lý danh sách số nguyên, cung cấp các phương thức thao tác mảng. Dễ test bằng cách gọi NhapMang và các hàm tương ứng.
+
+--- File: TH04d\PhuongTrinhBacHai.cs ---
+Source:
+using System;
+
+namespace TH04d
+{
+	public class PhuongTrinhBacHai
+	{
+		public double A { get; set; }
+		public double B { get; set; }
+		public double C { get; set; }
+
+		public PhuongTrinhBacHai() { A=0;B=0;C=0; }
+		public PhuongTrinhBacHai(double a,double b,double c){A=a;B=b;C=c;}
+
+		public string GiaiBacNhat() { ... }
+		public string GiaiBacHai() { ... }
+	}
+}
+
+Giải thích:
+Cung cấp giải pháp toán học cho phương trình bậc nhất và bậc hai. Trả về kết quả dưới dạng chuỗi mô tả nghiệm.
+Ví dụ: A=1,B=2,C=1 -> delta=0 -> "Nghiệm kép x = -1"
+
+--- File: TH04d\Program.cs ---
+Source: chứa Main khởi chạy frmBaiTap2 (mặc định Project TH04d chạy frmBaiTap2).
+
+Giải thích: chạy ứng dụng Windows Forms; để kiểm tra, set project TH04d là startup project và chạy.
+
+
+=== Project: TH04c ===
+
+Các file chính và mô tả ngắn:
+
+--- TH04c\\frmBaiTap1.cs ---
+Source: phép toán cơ bản (+,-,*,/) với kiểm tra dữ liệu và xử lý ngoại lệ. Có ErrorProvider để báo lỗi ô nhập.
+Ví dụ: a=5 b=3 -> Kết quả cộng = 8
+
+--- TH04c\\frmBaiTap2.cs ---
+Source: form đăng ký, kiểm tra email (regex), kiểm tra mật khẩu và xác nhận.
+Ví dụ: nhập tên, email hợp lệ "user@example.com" và mật khẩu trùng -> hiện MessageBox thông tin.
+
+--- TH04c\\frmBaiTap3.cs ---
+Source: tính UCLN và BCNN bằng thuật toán Euclid.
+Ví dụ: a=12 b=18 -> UCLN=6 BCNN=36
+
+--- TH04c\\frmBaiTap4.cs ---
+Source: nhập dãy số, tính tổng, tổng chẵn, tổng lẻ; duy trì danh sách và xuất dãy vừa nhập.
+
+--- TH04c\\frmBaiTap5.cs ---
+Source: đọc số thành chữ (1..999) với các quy tắc ngôn ngữ Việt.
+Ví dụ: 125 -> "một trăm hai mươi lăm"
+
+--- TH04c\\Program.cs ---
+Source: Main khởi chạy frmBaiTap5 (mặc định Project TH04c chạy frmBaiTap5).
+
+
+HƯỚNG DẪN CHẠY VÀ KIỂM TRA:
+1. Mở solution Lab04\Lab04.slnx trong Visual Studio.
+2. Chọn project TH04d hoặc TH04c làm startup project (tùy muốn chạy bộ bài tập nào).
+3. Build và Run (F5). Kiểm tra các form tương ứng.
+
+GHI CHÚ:
+- Các file Designer chứa mã tạo giao diện; báo cáo ở trên chỉ tóm tắt, mã đầy đủ vẫn nằm trong project.
+- Kết quả ví dụ nêu ở trên là tham khảo; người dùng có thể thử các giá trị khác trong giao diện.
+
+KẾT LUẬN NGẮN GỌN:
+Báo cáo này gom mã nguồn chính của Lab04, mô tả chức năng từng file và ví dụ kết quả để làm báo cáo nộp.
+
+-- Kết thúc báo cáo --
