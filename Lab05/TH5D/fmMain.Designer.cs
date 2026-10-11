@@ -1,0 +1,141 @@
+﻿#nullable enable
+namespace TH5D;
+
+partial class fmMain
+{
+    private System.ComponentModel.IContainer? components;
+    protected override void Dispose(bool disposing)
+    {
+        if (disposing) components?.Dispose();
+        base.Dispose(disposing);
+    }
+
+    private void InitializeComponent()
+    {
+        components = new System.ComponentModel.Container();
+        AutoScaleMode = AutoScaleMode.Dpi;
+        Font = new Font("Tahoma", 11F);
+        lblTitle = new Label();
+        lblHuongDan = new Label();
+        grpWinform = new GroupBox();
+        lblWinform = new Label();
+        grpSql = new GroupBox();
+        lblSql = new Label();
+        lblTH5C = new Label();
+        grpWinform.SuspendLayout();
+        grpSql.SuspendLayout();
+        SuspendLayout();
+        lblTitle.Name = "lblTitle";
+        lblTitle.Location = new Point(30, 75);
+        lblTitle.Size = new Size(870, 42);
+        lblTitle.TabIndex = 0;
+        lblTitle.Text = "LAB 05 - TH5D";
+        lblTitle.AutoSize = false;
+        lblTitle.TextAlign = ContentAlignment.MiddleLeft;
+        lblTitle.Font = new Font("Tahoma", 17F, FontStyle.Bold);
+        lblHuongDan.Name = "lblHuongDan";
+        lblHuongDan.Location = new Point(30, 132);
+        lblHuongDan.Size = new Size(870, 35);
+        lblHuongDan.TabIndex = 1;
+        lblHuongDan.Text = "Chọn bài trong thanh menu. Đóng cửa sổ bài để quay lại đây.";
+        lblHuongDan.AutoSize = false;
+        lblHuongDan.TextAlign = ContentAlignment.MiddleLeft;
+        grpWinform.Name = "grpWinform";
+        grpWinform.Location = new Point(30, 200);
+        grpWinform.Size = new Size(410, 175);
+        grpWinform.TabIndex = 2;
+        grpWinform.Text = "Windows Forms 5d";
+        lblWinform.Name = "lblWinform";
+        lblWinform.Location = new Point(20, 35);
+        lblWinform.Size = new Size(365, 120);
+        lblWinform.TabIndex = 3;
+        lblWinform.Text = "Tại lớp: hồ sơ sinh viên, tài khoản.\nNâng cao: chuyển học viên giữa hai lớp.\nVề nhà: đếm ngược, menu chính.";
+        lblWinform.AutoSize = false;
+        lblWinform.TextAlign = ContentAlignment.MiddleLeft;
+        grpSql.Name = "grpSql";
+        grpSql.Location = new Point(480, 200);
+        grpSql.Size = new Size(420, 175);
+        grpSql.TabIndex = 4;
+        grpSql.Text = "Cơ sở dữ liệu trong phần cuối đề";
+        lblSql.Name = "lblSql";
+        lblSql.Location = new Point(20, 35);
+        lblSql.Size = new Size(375, 120);
+        lblSql.TabIndex = 5;
+        lblSql.Text = "Quản lý môn học, sinh viên, điểm và lớp.\nCần cấu hình SQL Server trước khi lưu dữ liệu.";
+        lblSql.AutoSize = false;
+        lblSql.TextAlign = ContentAlignment.MiddleLeft;
+        lblTH5C.Name = "lblTH5C";
+        lblTH5C.Location = new Point(30, 408);
+        lblTH5C.Size = new Size(870, 30);
+        lblTH5C.TabIndex = 6;
+        lblTH5C.Text = "Menu TH5C mở các bài 5c đã làm.";
+        lblTH5C.AutoSize = false;
+        lblTH5C.TextAlign = ContentAlignment.MiddleLeft;
+        Controls.Add(lblTH5C);
+        grpSql.Controls.Add(lblSql);
+        Controls.Add(grpSql);
+        grpWinform.Controls.Add(lblWinform);
+        Controls.Add(grpWinform);
+        Controls.Add(lblHuongDan);
+        Controls.Add(lblTitle);
+        menuStrip1 = new MenuStrip { Name = "menuStrip1", Font = Font };
+        mnuTH5C = new ToolStripMenuItem("TH5C") { Name = "mnuTH5C" };
+        mnuTaiLop = new ToolStripMenuItem("Tại lớp 5d") { Name = "mnuTaiLop" };
+        mnuNangCao = new ToolStripMenuItem("Nâng cao 5d") { Name = "mnuNangCao" };
+        mnuVeNha = new ToolStripMenuItem("Về nhà 5d") { Name = "mnuVeNha" };
+        mnuSql = new ToolStripMenuItem("SQL") { Name = "mnuSql" };
+        mnuThoat = new ToolStripMenuItem("Thoát") { Name = "mnuThoat" };
+        mnuHoSo = new ToolStripMenuItem("Hồ sơ sinh viên") { Name = "mnuHoSo" };
+        mnuTaiKhoan = new ToolStripMenuItem("Tài khoản ngân hàng") { Name = "mnuTaiKhoan" };
+        mnuChuyenLop = new ToolStripMenuItem("Chuyển lớp") { Name = "mnuChuyenLop" };
+        mnuDemNguoc = new ToolStripMenuItem("Đếm ngược") { Name = "mnuDemNguoc" };
+        mnuMonHoc = new ToolStripMenuItem("Môn học") { Name = "mnuMonHoc" };
+        mnuSinhVienSql = new ToolStripMenuItem("Sinh viên") { Name = "mnuSinhVienSql" };
+        mnuDiem = new ToolStripMenuItem("Điểm") { Name = "mnuDiem" };
+        mnuLop = new ToolStripMenuItem("Lớp") { Name = "mnuLop" };
+        mnuTaiLop.DropDownItems.AddRange(new ToolStripItem[] { mnuHoSo, mnuTaiKhoan });
+        mnuNangCao.DropDownItems.Add(mnuChuyenLop);
+        mnuVeNha.DropDownItems.Add(mnuDemNguoc);
+        mnuSql.DropDownItems.AddRange(new ToolStripItem[] { mnuMonHoc, mnuSinhVienSql, mnuDiem, mnuLop });
+        menuStrip1.Items.AddRange(new ToolStripItem[] { mnuTH5C, mnuTaiLop, mnuNangCao, mnuVeNha, mnuSql, mnuThoat });
+        MainMenuStrip = menuStrip1;
+        Controls.Add(menuStrip1);
+        ClientSize = new Size(930, 470);
+        AutoScaleDimensions = new SizeF(96F, 96F);
+        Name = "fmMain";
+        Text = "Lab 05 - TH5D - Windows Forms nâng cao";
+        StartPosition = FormStartPosition.CenterParent;
+        FormBorderStyle = FormBorderStyle.FixedDialog;
+        MaximizeBox = false;
+        StartPosition = FormStartPosition.CenterScreen;
+        grpSql.ResumeLayout(false);
+        grpSql.PerformLayout();
+        grpWinform.ResumeLayout(false);
+        grpWinform.PerformLayout();
+        ResumeLayout(false);
+        PerformLayout();
+    }
+
+    private Label lblTitle = null!;
+    private Label lblHuongDan = null!;
+    private GroupBox grpWinform = null!;
+    private Label lblWinform = null!;
+    private GroupBox grpSql = null!;
+    private Label lblSql = null!;
+    private Label lblTH5C = null!;
+    private MenuStrip menuStrip1 = null!;
+    private ToolStripMenuItem mnuTH5C = null!;
+    private ToolStripMenuItem mnuTaiLop = null!;
+    private ToolStripMenuItem mnuNangCao = null!;
+    private ToolStripMenuItem mnuVeNha = null!;
+    private ToolStripMenuItem mnuSql = null!;
+    private ToolStripMenuItem mnuThoat = null!;
+    private ToolStripMenuItem mnuHoSo = null!;
+    private ToolStripMenuItem mnuTaiKhoan = null!;
+    private ToolStripMenuItem mnuChuyenLop = null!;
+    private ToolStripMenuItem mnuDemNguoc = null!;
+    private ToolStripMenuItem mnuMonHoc = null!;
+    private ToolStripMenuItem mnuSinhVienSql = null!;
+    private ToolStripMenuItem mnuDiem = null!;
+    private ToolStripMenuItem mnuLop = null!;
+}

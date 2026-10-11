@@ -1,0 +1,3 @@
+﻿{
+  "ConnectionString": "Data Source=.\\SQLEXPRESS;Initial Catalog=QLSinhVien;Integrated Security=True;TrustServerCertificate=True;Connect Timeout=5"
+}
