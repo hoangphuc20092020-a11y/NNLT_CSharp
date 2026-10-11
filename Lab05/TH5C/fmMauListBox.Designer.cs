@@ -116,7 +116,7 @@
             Margin = new Padding(4, 3, 4, 3);
             Name = "fmMauListBox";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Sự dụng ListBox";
+            Text = "Sử dụng ListBox";
             ResumeLayout(false);
         }
 

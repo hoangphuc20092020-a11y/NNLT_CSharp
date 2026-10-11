@@ -4,5 +4,11 @@
     <Compile Update="fmMauListBox.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="fmMauDantoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LabForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 </Project>

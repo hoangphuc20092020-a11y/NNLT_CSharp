@@ -4,7 +4,7 @@ using System.Windows.Forms;
 
 namespace TH5C
 {
-    public partial class fmMauListBox : Form
+    public partial class fmMauListBox : LabForm
     {
         public fmMauListBox()
         {
@@ -34,7 +34,7 @@ namespace TH5C
 
             if (viTri < 0)
             {
-                MessageBox.Show("Bạn chưa chọn phần tử.");
+                ThongBao("Bạn chưa chọn phần tử.");
                 return;
             }
 
@@ -88,7 +88,7 @@ namespace TH5C
 
             if (cacViTri.Length == 0)
             {
-                MessageBox.Show("Hãy chọn các phần tử cần chuyển.");
+                ThongBao("Hãy chọn các phần tử cần chuyển.");
                 return;
             }
 
@@ -112,14 +112,7 @@ namespace TH5C
             if (e.CloseReason != CloseReason.UserClosing)
                 return;
 
-            DialogResult ketQua = MessageBox.Show(
-                "Bạn có muốn đóng chương trình không?",
-                "Xác nhận",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button2);
-
-            e.Cancel = ketQua != DialogResult.Yes;
+            e.Cancel = !XacNhan("Bạn có muốn đóng chương trình không?");
         }
     }
 }

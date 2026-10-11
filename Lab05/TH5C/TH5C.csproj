@@ -8,4 +8,15 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Update="fmMauPhongBan.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmUocSo.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmSinhVien.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmChuoi.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmTuDien.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmListSo.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmDanhBa.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="fmChonBai.cs"><SubType>Form</SubType></Compile>
+  </ItemGroup>
+
 </Project>

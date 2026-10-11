@@ -1,4 +1,4 @@
-namespace TH5C
+﻿namespace TH5C
 {
     internal static class Program
     {
@@ -11,7 +11,7 @@ namespace TH5C
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new fmMauListBox());
+            Application.Run(new fmTuDien());
         }
     }
 }
