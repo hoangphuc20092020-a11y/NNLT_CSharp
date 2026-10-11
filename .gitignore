@@ -1,0 +1,7 @@
+# Visual Studio settings and generated build output
+**/.vs/
+**/[Bb]in/
+**/[Oo]bj/
+*.csproj.user
+*.slnx.user
+*.suo

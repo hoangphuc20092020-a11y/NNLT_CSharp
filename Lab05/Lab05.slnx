@@ -1,0 +1,7 @@
+﻿<Solution>
+  <Project Path="TH5C/TH5C.csproj" Id="0ae6ea01-1a46-4363-ae14-7bcb413a9a1c" />
+  <Project Path="TH5D/TH5D.csproj" />
+  <Folder Name="/Kiểm tra/">
+    <Project Path="Tests/Check.csproj" />
+  </Folder>
+</Solution>
