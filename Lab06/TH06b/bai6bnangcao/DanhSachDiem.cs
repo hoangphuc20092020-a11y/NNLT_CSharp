@@ -1,18 +1,18 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1._6b
+namespace bai6bnangcao
 {
-    public partial class Form_3_2 : Form
+    public partial class DanhSachDiem : Form
     {
         private readonly string connectionString =
             "Server=localhost,1433;Database=QLSinhVien;User Id=sa;Password=YourStrong@Pass123;Encrypt=True;TrustServerCertificate=True;Connection Timeout=15;";
 
-        public Form_3_2()
+        public DanhSachDiem()
         {
             InitializeComponent();
         }
 
-        private async void Form_3_2_Load(object sender, EventArgs e)
+        private async void DanhSachDiem_Load(object sender, EventArgs e)
         {
             await LoadSubjectsAsync();
             await LoadScoresAsync(string.Empty);

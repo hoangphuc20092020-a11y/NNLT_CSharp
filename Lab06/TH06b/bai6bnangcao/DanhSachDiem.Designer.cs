@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1._6b
+﻿namespace bai6bnangcao
 {
-    partial class Form_3_2
+    partial class DanhSachDiem
     {
         /// <summary>
         /// Required designer variable.
@@ -123,7 +123,7 @@
             columnHeaderDiem.Text = "Điểm";
             columnHeaderDiem.Width = 150;
             // 
-            // Form_3_2
+            // DanhSachDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,9 +134,9 @@
             Controls.Add(labelMonHoc);
             Controls.Add(listViewDiem);
             Controls.Add(buttonHienThi);
-            Name = "Form_3_2";
-            Text = "Danh sách sinh viên";
-            Load += Form_3_2_Load;
+            Name = "DanhSachDiem";
+            Text = "Danh sách điểm";
+            Load += DanhSachDiem_Load;
             ResumeLayout(false);
             PerformLayout();
         }

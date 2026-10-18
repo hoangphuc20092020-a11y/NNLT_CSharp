@@ -1,6 +1,7 @@
-namespace WinFormsApp1
+﻿#nullable enable annotations
+namespace bai6bvenha
 {
-    partial class SalesForm
+    partial class BanHang
     {
         private System.ComponentModel.IContainer? components = null;
         private TextBox invoiceTextBox = null!;
@@ -188,7 +189,7 @@ namespace WinFormsApp1
             paymentButton.UseVisualStyleBackColor = true;
             paymentButton.Click += PaymentButton_Click;
             //
-            // SalesForm
+            // BanHang
             //
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -200,10 +201,10 @@ namespace WinFormsApp1
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "SalesForm";
+            Name = "BanHang";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Bán hàng";
-            Load += SalesForm_Load;
+            Load += BanHang_Load;
             ((System.ComponentModel.ISupportInitialize)quantityInput).EndInit();
             detailsGroup.ResumeLayout(false);
             detailsGroup.PerformLayout();

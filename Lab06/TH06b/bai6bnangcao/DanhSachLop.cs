@@ -1,13 +1,13 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1._6b
+namespace bai6bnangcao
 {
-    public partial class Form_3_1 : Form
+    public partial class DanhSachLop : Form
     {
         private readonly string connectionString =
             "Server=localhost,1433;Database=QLSinhVien;User Id=sa;Password=YourStrong@Pass123;Encrypt=True;TrustServerCertificate=True;Connection Timeout=15;";
 
-        public Form_3_1()
+        public DanhSachLop()
         {
             InitializeComponent();
         }

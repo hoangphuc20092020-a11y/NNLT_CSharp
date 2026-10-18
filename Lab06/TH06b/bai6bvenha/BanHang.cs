@@ -1,18 +1,18 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1
+namespace bai6bvenha
 {
-    internal sealed partial class SalesForm : Form
+    internal sealed partial class BanHang : Form
     {
         private string? invoiceId;
 
-        internal SalesForm()
+        internal BanHang()
         {
             InitializeComponent();
             SetEditingEnabled(false);
         }
 
-        private async void SalesForm_Load(object? sender, EventArgs e)
+        private async void BanHang_Load(object? sender, EventArgs e)
         {
             await LoadProductsAsync();
         }
@@ -21,7 +21,7 @@ namespace WinFormsApp1
         {
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 using var command = new SqlCommand("SELECT MaSP, TenSP FROM SanPham ORDER BY MaSP", connection);
                 await connection.OpenAsync();
                 using var reader = await command.ExecuteReaderAsync();
@@ -36,7 +36,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 
@@ -44,7 +44,7 @@ namespace WinFormsApp1
         {
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 await connection.OpenAsync();
                 using var transaction = (SqlTransaction)await connection.BeginTransactionAsync();
                 try
@@ -70,7 +70,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 
@@ -85,7 +85,7 @@ namespace WinFormsApp1
             var quantity = (int)quantityInput.Value;
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 await connection.OpenAsync();
                 using var transaction = (SqlTransaction)await connection.BeginTransactionAsync();
                 try
@@ -138,7 +138,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 
@@ -151,7 +151,7 @@ namespace WinFormsApp1
 
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 await connection.OpenAsync();
                 using var transaction = (SqlTransaction)await connection.BeginTransactionAsync();
                 try
@@ -191,7 +191,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 
@@ -205,7 +205,7 @@ namespace WinFormsApp1
 
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 using var command = new SqlCommand("UPDATE HOADON SET TinhTrangThanhToan = 1 WHERE MaHD = @MaHD AND TinhTrangThanhToan = 0", connection);
                 command.Parameters.AddWithValue("@MaHD", invoiceId);
                 await connection.OpenAsync();
@@ -217,7 +217,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 

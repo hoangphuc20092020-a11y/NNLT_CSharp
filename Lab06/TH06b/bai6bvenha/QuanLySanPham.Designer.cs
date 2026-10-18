@@ -1,6 +1,7 @@
-namespace WinFormsApp1
+﻿#nullable enable annotations
+namespace bai6bvenha
 {
-    partial class ProductForm
+    partial class QuanLySanPham
     {
         private System.ComponentModel.IContainer? components = null;
         private Label nameLabel = null!;
@@ -85,7 +86,7 @@ namespace WinFormsApp1
             closeButton.UseVisualStyleBackColor = true;
             closeButton.Click += CloseButton_Click;
             //
-            // ProductForm
+            // QuanLySanPham
             //
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -99,9 +100,9 @@ namespace WinFormsApp1
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "ProductForm";
+            Name = "QuanLySanPham";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Thêm sản phẩm mới";
+            Text = "Quản lý sản phẩm";
             ResumeLayout(false);
             PerformLayout();
         }

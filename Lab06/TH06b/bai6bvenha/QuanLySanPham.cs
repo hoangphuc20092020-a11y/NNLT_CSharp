@@ -1,10 +1,10 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1
+namespace bai6bvenha
 {
-    internal sealed partial class ProductForm : Form
+    internal sealed partial class QuanLySanPham : Form
     {
-        internal ProductForm()
+        internal QuanLySanPham()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace WinFormsApp1
             try
             {
                 var today = DateTime.Today;
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 await connection.OpenAsync();
                 using var transaction = (SqlTransaction)await connection.BeginTransactionAsync();
 
@@ -53,7 +53,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 

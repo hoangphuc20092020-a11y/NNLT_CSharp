@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1._6b
+﻿namespace bai6bnangcao
 {
-    partial class Form_3_1
+    partial class DanhSachLop
     {
         /// <summary>
         /// Required designer variable.
@@ -89,7 +89,7 @@
             listView1.UseCompatibleStateImageBehavior = false;
             listView1.View = View.Details;
             // 
-            // Form_3_1
+            // DanhSachLop
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -99,7 +99,7 @@
             Controls.Add(buttonHienThi);
             Font = new Font("Segoe UI", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Margin = new Padding(4);
-            Name = "Form_3_1";
+            Name = "DanhSachLop";
             Text = "Danh sách lớp";
             ResumeLayout(false);
         }

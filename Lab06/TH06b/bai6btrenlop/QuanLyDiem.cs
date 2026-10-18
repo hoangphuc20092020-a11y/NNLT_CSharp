@@ -1,19 +1,19 @@
-using System.Globalization;
+﻿using System.Globalization;
 using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1._6b
+namespace bai6btrenlop
 {
-    public partial class Form_2_2 : Form
+    public partial class QuanLyDiem : Form
     {
         private readonly string connectionString =
             "Server=localhost,1433;Database=QLSinhVien;User Id=sa;Password=YourStrong@Pass123;Encrypt=True;TrustServerCertificate=True;Connection Timeout=15;";
 
-        public Form_2_2()
+        public QuanLyDiem()
         {
             InitializeComponent();
         }
 
-        private async void Form_2_2_Load(object sender, EventArgs e)
+        private async void QuanLyDiem_Load(object sender, EventArgs e)
         {
             await LoadStudentsAsync();
             await LoadSubjectsAsync();

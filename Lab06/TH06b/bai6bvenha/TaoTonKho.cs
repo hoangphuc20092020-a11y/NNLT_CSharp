@@ -1,10 +1,10 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1
+namespace bai6bvenha
 {
-    internal sealed partial class InventoryForm : Form
+    internal sealed partial class TaoTonKho : Form
     {
-        internal InventoryForm()
+        internal TaoTonKho()
         {
             InitializeComponent();
         }
@@ -14,7 +14,7 @@ namespace WinFormsApp1
             var today = DateTime.Today;
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 await connection.OpenAsync();
                 using var transaction = (SqlTransaction)await connection.BeginTransactionAsync();
                 try
@@ -59,7 +59,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
     }

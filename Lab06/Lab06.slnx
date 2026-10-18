@@ -1,8 +1,13 @@
 ﻿<Solution>
   <Folder Name="/TH06a/">
-    <Project Path="bai6amau/bai6amau.csproj" />
-    <Project Path="bai6atrenlop/bai6atrenlop.csproj" Id="c4d5ac5e-b29d-4f8c-bec0-3af5e6b87e77" />
-    <Project Path="bai6avenha/bai6avenha.csproj" Id="dbf300bf-cc44-48cb-bf18-1093af01e3a4" />
-    <Project Path="bai6anangcao/bai6anangcao.csproj" />
+    <Project Path="TH06a/bai6amau/bai6amau.csproj" />
+    <Project Path="TH06a/bai6atrenlop/bai6atrenlop.csproj" Id="c4d5ac5e-b29d-4f8c-bec0-3af5e6b87e77" />
+    <Project Path="TH06a/bai6avenha/bai6avenha.csproj" Id="dbf300bf-cc44-48cb-bf18-1093af01e3a4" />
+    <Project Path="TH06a/bai6anangcao/bai6anangcao.csproj" />
+  </Folder>
+  <Folder Name="/TH06b/">
+    <Project Path="TH06b/bai6btrenlop/bai6btrenlop.csproj" />
+    <Project Path="TH06b/bai6bnangcao/bai6bnangcao.csproj" />
+    <Project Path="TH06b/bai6bvenha/bai6bvenha.csproj" />
   </Folder>
 </Solution>

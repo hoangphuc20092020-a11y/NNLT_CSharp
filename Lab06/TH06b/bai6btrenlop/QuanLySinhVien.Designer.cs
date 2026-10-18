@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1._6b
+﻿namespace bai6btrenlop
 {
-    partial class Form_2_1
+    partial class QuanLySinhVien
     {
         /// <summary>
         /// Required designer variable.
@@ -137,7 +137,7 @@
             button3.UseVisualStyleBackColor = true;
             button3.Click += buttonXoa_Click;
             // 
-            // Form_2_1
+            // QuanLySinhVien
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -153,9 +153,9 @@
             Controls.Add(labelHoTen);
             Controls.Add(labelMaSinhVien);
             Controls.Add(labelLop);
-            Name = "Form_2_1";
-            Text = "frmSinhVien_Combo";
-            Load += Form_2_1_Load;
+            Name = "QuanLySinhVien";
+            Text = "Quản lý sinh viên";
+            Load += QuanLySinhVien_Load;
             ResumeLayout(false);
             PerformLayout();
         }

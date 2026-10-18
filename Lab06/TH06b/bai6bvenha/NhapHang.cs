@@ -1,15 +1,15 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1
+namespace bai6bvenha
 {
-    internal sealed partial class ImportForm : Form
+    internal sealed partial class NhapHang : Form
     {
-        internal ImportForm()
+        internal NhapHang()
         {
             InitializeComponent();
         }
 
-        private async void ImportForm_Load(object? sender, EventArgs e)
+        private async void NhapHang_Load(object? sender, EventArgs e)
         {
             await LoadProductsAsync();
         }
@@ -18,7 +18,7 @@ namespace WinFormsApp1
         {
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 using var command = new SqlCommand("SELECT MaSP, TenSP FROM SanPham ORDER BY MaSP", connection);
                 await connection.OpenAsync();
                 using var reader = await command.ExecuteReaderAsync();
@@ -33,7 +33,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 
@@ -47,7 +47,7 @@ namespace WinFormsApp1
 
             try
             {
-                using var connection = Database.CreateConnection();
+                using var connection = KetNoiCSDL.CreateConnection();
                 using var command = new SqlCommand("UPDATE TONKHO SET SLNhap = SLNhap + @SoLuong WHERE MaSP = @MaSP AND NgayTon = @NgayTon", connection);
                 command.Parameters.AddWithValue("@SoLuong", (int)quantityInput.Value);
                 command.Parameters.AddWithValue("@MaSP", productId);
@@ -62,7 +62,7 @@ namespace WinFormsApp1
             }
             catch (Exception ex)
             {
-                Database.ShowDatabaseError(ex);
+                KetNoiCSDL.ShowKetNoiCSDLError(ex);
             }
         }
 

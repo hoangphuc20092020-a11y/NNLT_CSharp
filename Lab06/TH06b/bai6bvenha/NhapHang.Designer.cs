@@ -1,6 +1,7 @@
-namespace WinFormsApp1
+﻿#nullable enable annotations
+namespace bai6bvenha
 {
-    partial class ImportForm
+    partial class NhapHang
     {
         private System.ComponentModel.IContainer? components = null;
         private Label productLabel = null!;
@@ -76,7 +77,7 @@ namespace WinFormsApp1
             importButton.UseVisualStyleBackColor = true;
             importButton.Click += ImportButton_Click;
             //
-            // ImportForm
+            // NhapHang
             //
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -89,10 +90,10 @@ namespace WinFormsApp1
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "ImportForm";
+            Name = "NhapHang";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Nhập hàng";
-            Load += ImportForm_Load;
+            Load += NhapHang_Load;
             ((System.ComponentModel.ISupportInitialize)quantityInput).EndInit();
             ResumeLayout(false);
             PerformLayout();

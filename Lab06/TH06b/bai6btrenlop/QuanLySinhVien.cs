@@ -1,4 +1,4 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 /*
 CREATE DATABASE QLSinhVien;
 GO
@@ -31,9 +31,9 @@ GO
 SELECT * FROM Lop;
 SELECT * FROM SinhVien;
  */
-namespace WinFormsApp1._6b
+namespace bai6btrenlop
 {
-    public partial class Form_2_1 : Form
+    public partial class QuanLySinhVien : Form
     {
 
         private readonly string ConnectionString =
@@ -46,13 +46,13 @@ namespace WinFormsApp1._6b
             "Connection Timeout=15;";
 
 
-        public Form_2_1()
+        public QuanLySinhVien()
         {
             InitializeComponent();
             dateTimePickerNgaySinh.MaxDate = DateTime.Today;
         }
 
-        private async void Form_2_1_Load(object sender, EventArgs e)
+        private async void QuanLySinhVien_Load(object sender, EventArgs e)
         {
             await LoadClassesAsync();
         }

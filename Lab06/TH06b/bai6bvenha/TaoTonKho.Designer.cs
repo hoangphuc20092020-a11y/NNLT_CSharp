@@ -1,6 +1,7 @@
-namespace WinFormsApp1
+﻿#nullable enable annotations
+namespace bai6bvenha
 {
-    partial class InventoryForm
+    partial class TaoTonKho
     {
         private System.ComponentModel.IContainer? components = null;
         private Label descriptionLabel = null!;
@@ -51,7 +52,7 @@ namespace WinFormsApp1
             statusLabel.Size = new Size(0, 20);
             statusLabel.TabIndex = 2;
             //
-            // InventoryForm
+            // TaoTonKho
             //
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -62,7 +63,7 @@ namespace WinFormsApp1
             FormBorderStyle = FormBorderStyle.FixedDialog;
             MaximizeBox = false;
             MinimizeBox = false;
-            Name = "InventoryForm";
+            Name = "TaoTonKho";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Tạo tồn kho";
             ResumeLayout(false);

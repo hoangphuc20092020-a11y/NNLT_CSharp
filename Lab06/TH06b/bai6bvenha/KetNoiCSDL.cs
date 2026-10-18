@@ -1,15 +1,15 @@
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 
-namespace WinFormsApp1
+namespace bai6bvenha
 {
-    internal static class Database
+    internal static class KetNoiCSDL
     {
         internal const string ConnectionString =
             "Server=localhost,1433;Database=QLCuaHang;User Id=sa;Password=YourStrong@Pass123;Encrypt=True;TrustServerCertificate=True;Connection Timeout=15;";
 
         internal static SqlConnection CreateConnection() => new(ConnectionString);
 
-        internal static void ShowDatabaseError(Exception exception)
+        internal static void ShowKetNoiCSDLError(Exception exception)
         {
             var message = exception is SqlException sqlException
                 ? sqlException.Number switch

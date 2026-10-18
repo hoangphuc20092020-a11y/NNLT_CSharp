@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1._6b
+﻿namespace bai6btrenlop
 {
-    partial class Form_2_2
+    partial class QuanLyDiem
     {
         /// <summary>
         /// Required designer variable.
@@ -121,7 +121,7 @@
             textBoxDiem.Size = new Size(246, 27);
             textBoxDiem.TabIndex = 24;
             // 
-            // Form_2_2
+            // QuanLyDiem
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -135,9 +135,9 @@
             Controls.Add(labelDiem);
             Controls.Add(labelMonHoc);
             Controls.Add(labelSinhVien);
-            Name = "Form_2_2";
-            Text = "frm_Diem_combo";
-            Load += Form_2_2_Load;
+            Name = "QuanLyDiem";
+            Text = "Quản lý điểm";
+            Load += QuanLyDiem_Load;
             ResumeLayout(false);
             PerformLayout();
         }
