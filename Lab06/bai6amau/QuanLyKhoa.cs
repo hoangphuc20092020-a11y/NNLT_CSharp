@@ -14,7 +14,7 @@ namespace bai6amau
             "User ID=sa;Password=\"HocSQL@2026!\";" +
             "Encrypt=True;TrustServerCertificate=True;";
 
-       
+
 
         public QuanLyKhoa()
         {
@@ -150,7 +150,6 @@ namespace bai6amau
             btnThem.Text = "Thêm";
             btnThem.UseVisualStyleBackColor = true;
             btnThem.Click += btnThem_Click;
-         
             // 
             // btnXoa
             // 
@@ -161,7 +160,6 @@ namespace bai6amau
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = true;
             btnXoa.Click += btnXoa_Click;
-            
             // 
             // btnSua
             // 
@@ -172,7 +170,6 @@ namespace bai6amau
             btnSua.Text = "Sửa";
             btnSua.UseVisualStyleBackColor = true;
             btnSua.Click += btnSua_Click;
-            
             // 
             // lblMaKhoa
             // 
@@ -198,6 +195,7 @@ namespace bai6amau
             txtMaKhoa.Name = "txtMaKhoa";
             txtMaKhoa.Size = new Size(156, 27);
             txtMaKhoa.TabIndex = 5;
+            txtMaKhoa.TextChanged += txtMaKhoa_TextChanged;
             // 
             // txtTenKhoa
             // 
@@ -232,5 +230,9 @@ namespace bai6amau
         private TextBox txtMaKhoa = null!;
         private TextBox txtTenKhoa = null!;
 
+        private void txtMaKhoa_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
